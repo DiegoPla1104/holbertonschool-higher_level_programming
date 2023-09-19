@@ -7,7 +7,7 @@ else:
     las = abs(number) % 10
 
 if las > 5:
-    print(f"Last digit of {number} is {las} and is grater than 5")
+    print(f"Last digit of {number} is {las} and is greater than 5")
 elif las == 0:
     print(f"Last digit of {number} is {las} and is 0")
 elif las < 6 and not 0:
