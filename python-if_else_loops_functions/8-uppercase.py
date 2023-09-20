@@ -6,4 +6,4 @@ def uppercase(str):
             saver += chr(ord(iter) - 32)
         else:
             saver += chr(ord(iter))
-    print(saver)
+    print(f"{saver}")
