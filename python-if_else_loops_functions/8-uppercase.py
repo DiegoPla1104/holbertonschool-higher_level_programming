@@ -6,5 +6,5 @@ def uppercase(str):
             saver += chr(ord(iter) - 32)
         else:
             saver += chr(ord(iter))
-    print(f"{saver}")
+    print("{}".format(saver))
     print("")
