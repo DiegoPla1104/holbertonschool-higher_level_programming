@@ -7,4 +7,3 @@ def uppercase(str):
         else:
             saver += chr(ord(iter))
     print("{}".format(saver))
-    print("")
