@@ -7,7 +7,6 @@ if __name__ == "__main__":
         print("0 arguments.")
     if length == 2:
         print("1 argument:")
-        print(f"{iter}: {thing[iter]}")
     if length > 2:
         print("{} arguments:" .format(len(sys.argv) - 1))
     iter = 0
