@@ -9,4 +9,4 @@ if __name__ == "__main__":
         print("{} arguments:" .format(len(sys.argv) - 1))
     iter = 0
     for iter in range(1, length):
-        print(iter, ": ", thing[iter])
+        print(f"{iter}: {thing[iter]}")
