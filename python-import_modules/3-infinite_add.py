@@ -5,5 +5,5 @@ if __name__ == "__main__":
     length = len(sys.argv)
     result = 0
     for iter in range(1, length):
-            result += int(thing[iter])
+        result += int(thing[iter])
     print(result)
