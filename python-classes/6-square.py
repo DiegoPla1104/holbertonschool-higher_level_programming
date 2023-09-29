@@ -2,6 +2,8 @@
 """
     Square Class Object
 """
+
+
 class Square():
     """Square"""
     def __init__(self, size=0, position=(0, 0)):
@@ -24,10 +26,12 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
+
     @property
     def size(self):
         """Size retriever"""
         return self.__size
+
     @size.setter
     def size(self, value):
         """Size parameters"""
@@ -37,10 +41,12 @@ class Square():
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
     @property
     def position(self):
         """Position retriever"""
         return self.__position
+
     @position.setter
     def position(self, value):
         """Position parameters"""
@@ -56,9 +62,11 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
     def area(self):
         """Area of the Square"""
         return self.__size * self.__size
+
     def my_print(self):
         """Function to print the Square"""
         if self.__size == 0:
