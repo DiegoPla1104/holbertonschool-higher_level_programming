@@ -33,6 +33,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Defining position cualifications"""
         if not isinstance(value, tuple) or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not isinstance(value[0], int) or not isinstance(value[1], int):
@@ -41,9 +42,11 @@ class Square:
             self.__position = value
 
     def area(self):
+        """Returns the value of the Area of the square"""
         return self.__size * self.__size
 
     def my_print(self):
+        """Function to print information about Square"""
         if self.__size == 0:
             print()
 
