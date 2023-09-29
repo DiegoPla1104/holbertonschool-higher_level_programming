@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-# Defining empty Square class
+"""
+    Defining an empty class named Square
+"""
 class Square:
+    """
+        Requirements to make an empty class of type square
+    """
     pass
