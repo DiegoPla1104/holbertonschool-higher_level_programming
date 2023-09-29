@@ -6,9 +6,10 @@
 
 class Square:
     """
-        Creating the attribute for sai object
+        Creating the attribute for said object
     """
     def __init__(self, size=0, position=(0, 0)):
+        """Defining the properties of Square"""
         self.__size = size
         self.__position = position
 
@@ -37,7 +38,7 @@ class Square:
         if not isinstance(value, tuple) or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")     
         else:
             self.__position = value
 
@@ -49,13 +50,13 @@ class Square:
         """Function to print information about Square"""
         if self.__size == 0:
             print()
+            return
 
-    if self.__position[0] >= 0 and self.__position[1] >= 0:
-        for i in range(self.__position[0]):
+        if self.__position[0] >= 0 and self.__position[1] >= 0:
+            for i in range(self.__position[1]):
+                print()
+
+        for j in range(self.__size):
+            for k in range(self.__position[0]):
+                print(" " * self.__position[0], "#" * self.__size)
             print()
-    for j in range(self.__size):
-        for k in range(self.__position[0]):
-            print(" ", end='')
-        for x in range(self.__size):
-            print("#" * self.__size)
-        print()
