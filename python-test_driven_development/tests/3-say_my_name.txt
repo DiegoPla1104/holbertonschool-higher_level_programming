@@ -1,0 +1,78 @@
+===================================
+Test de imprimir nombre y apellido
+===================================
+
+"""
+   Esto es un test para la funcion sa_my_name
+   primero importamos el modulo 3-say_my_name,
+   de este modulo traemos la funcion say_my_name
+"""
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+test 1:
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+test 2:
+
+>>> say_my_name("Diego", )
+My name is Diego 
+
+test 3:
+
+>>> say_my_name("Homero", "Chino")
+My name is Homero Chino
+
+test 4:
+
+>>> say_my_name("Homero", "68463")
+My name is Homero 68463
+
+test 5:
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+test 6:
+
+>>> say_my_name("KND", "Kids", "Next", "Door")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 4 were given
+
+test 7:
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+test 8:
+
+>>> say_my_name(50, "Alicia")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+test 9
+
+>>> say_my_name("Erndesto", ["De La", "Cruz"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+test 10
+
+>>> say_my_name([[12, 27], [12, 8]])
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+test 11
+
+>>> say_my_name([[31, 26], [34, 49]], 42)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+test 12
+
+>>> say_my_name("[[13, 24], [83, 64]]")
+My name is [[13, 24], [83, 64]] 
