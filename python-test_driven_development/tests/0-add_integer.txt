@@ -11,43 +11,76 @@
 
 test 1:
 
->>> add_integer(2342342, 12412123)
-14754465
+>>> add_integer(4232, -324)
+3908
 
 test 2:
 
->>> add_integer(34, "Hello")
-Traceback (most recent call last):
-TypeError: b must be an integer
+>>> add_integer(8.4, 5)
+13
 
 test 3:
 
->>> add_integer("Goodnight", 44)
-Traceback (most recent call last):
-TypeError: a must be an integer
+>>> add_integer(14, 4)
+18
 
 test 4:
 
->>> add_integer(85, 2)
-87
+>>> add_integer(4, "Rodrigo")
+Traceback (most recent call last):
+TypeError: b must be an integer
 
 test 5:
 
->>> add_integer(2.3, 96)
-98
+>>> add_integer("casa", 1234)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
 test 6:
 
->>> add_integer("", "Seeyou")
+>>> add_integer("", "")
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 test 7:
-
->>> add_integer(2, -1)
-1
+>>> add_integer(2*3, 4/2)
+8
 
 test 8:
+>>> add_integer(75, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
 
->>> add_integer(4, 2)
-6
+test 9:
+>>> add_integer(75, -float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+test 10:
+>>> add_integer(float('inf'), -float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+test 11:
+>>> add_integer((5.4), -float('NaN'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+test 12:
+>>> add_integer((5.4))
+103
+
+test 13:
+>>> add_integer((), ())
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+test 14:
+>>> add_integer(())
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+test 15:
+>>> add_integer((None), (None))
+Traceback (most recent call last):
+TypeError: a must be an integer
