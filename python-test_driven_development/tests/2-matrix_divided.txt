@@ -1,11 +1,9 @@
 =============================
-Test de division de enteros
+Tests for Task 1
 =============================
 
 """
-   Esto es un test para la funcion matrix_divided
-   primero importamos el modulo 2-matrix_divided,
-   de este modulo traemos la funcion matrix_divided
+    This are the tests for task 1
 """
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
