@@ -23,7 +23,7 @@ ZeroDivisionError: division by zero
 
 test 3:
 
->>> matrix_divided([[98, "hello", 6], [43, 19, 85,]], 35)
+>>> matrix_divided([[98, "hello", 6], [43, 19, 85,]], 3)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
@@ -52,7 +52,7 @@ test 8:
 
 >>> matrix_divided([["5", 8], [6, 2]], 3)
 Traceback (most recent call last):
-TypeError: matrix mut be a matrix (list of lists) of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 test 9:
 
