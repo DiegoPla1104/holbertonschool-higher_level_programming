@@ -10,44 +10,36 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
 test 1:
-
 >>> add_integer(2342342, 12412123)
 14754465
 
 test 2:
-
 >>> add_integer(34, "Hello")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
 test 3:
-
 >>> add_integer("Goodnight", 44)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 test 4:
-
 >>> add_integer(85, 2)
 87
 
 test 5:
-
->>> add_integer(2, 96)
+>>> add_integer(2.3, 96)
 98
 
 test 6:
-
 >>> add_integer("", "Seeyou")
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 test 7:
-
 >>> add_integer(2, -1)
 1
 
 test 8:
-
 >>> add_integer(4, 2)
 6
