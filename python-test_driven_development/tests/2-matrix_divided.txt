@@ -1,0 +1,61 @@
+=============================
+Test de division de enteros
+=============================
+
+"""
+   Esto es un test para la funcion matrix_divided
+   primero importamos el modulo 2-matrix_divided,
+   de este modulo traemos la funcion matrix_divided
+"""
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+test 1:
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+test 2:
+
+>>> matrix_divided([[2, 5, 9]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+test 3:
+
+>>> matrix_divided([[98, "hello", 6], [43, 19, 85,]], 35)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+test 4:
+
+>>> matrix_divided([[666]], 8)
+[[83.25]]
+
+test 5:
+
+>>> matrix_divided([[1, 4], [3, 7]], "Goodnight")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+test 6:
+
+>>> matrix_divided([[1.5, 5.9, 4.4], [8, 7, 95]], 2)
+[[0.75, 2.95, 2.2], [4.0, 3.5, 47.5]]
+
+test 7:
+
+>>> matrix_divided([[5, 7], [6, 2]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+test 8:
+
+>>> matrix_divided([["5", 8], [6, 2]], 3)
+Traceback (most recent call last):
+TypeError: matrix mut be a matrix (list of lists) of integers/floats
+
+test 9:
+
+>>> matrix_divided([["5", 8], [6, 2]], "3")
+Traceback (most recent call last):
+TypeError: div must be a number
