@@ -37,7 +37,7 @@ the same size")
         l1 = []
         for b in a:
             if type(b) is not int and type(b) is not float:
-                raise TypeError("matrix mut be a matrix (list of lists) of \
+                raise TypeError("matrix must be a matrix (list of lists) of \
 integers/floats")
 
             l1.append(round(b / div, 2))
