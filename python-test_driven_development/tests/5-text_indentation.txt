@@ -80,3 +80,8 @@ test 8:
 >>> text_indentation({"Diego":7, "Pla":4})
 Traceback (most recent call last):
 TypeError: text must be a string
+
+test 9:
+
+>>> text_indentation("")
+<BLANKLINE>
