@@ -9,6 +9,7 @@ class Rectangle:
         Creating the attribute for sai object
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.__height = height
         self.__width = width
