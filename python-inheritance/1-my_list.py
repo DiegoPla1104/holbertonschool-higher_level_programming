@@ -5,7 +5,7 @@
 
 
 class MyList(list):
-    """ 
+    """
         Class named MyList
     """
 
