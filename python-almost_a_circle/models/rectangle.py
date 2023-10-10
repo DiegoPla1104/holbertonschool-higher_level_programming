@@ -11,6 +11,7 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """__init__"""
         self.__width = width
         self.__height = height
         self.__x = x
@@ -19,6 +20,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Property width"""
         return self.__width
 
     @width.setter
@@ -32,7 +34,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Property setter for square"""
+        """Property height"""
         return self.__height
 
     @height.setter
@@ -46,6 +48,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Property x"""
         return self.__x
 
     @x.setter
@@ -59,6 +62,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Property y"""
         return self.__y
 
     @y.setter
