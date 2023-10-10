@@ -105,4 +105,4 @@ class Rectangle(Base):
         for i in range(self.__height):
             saved_str += str(f"{self.print_symbol}" * self.__width) + '\n'
         saved_str = saved_str[:-1]
-        return saved_str
+        print(saved_str)
