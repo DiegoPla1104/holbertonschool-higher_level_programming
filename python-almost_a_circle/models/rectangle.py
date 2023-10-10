@@ -34,6 +34,8 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    print_symbol = "#"
+
     @property
     def width(self):
         """Property width"""
@@ -94,3 +96,13 @@ class Rectangle(Base):
         """Calculates the area of the rectangle"""
 
         return (self.__height * self.__width)
+
+    def display(self):
+        """Displays the Rectangle"""
+        saved_str = ""
+        if self.__height == 0 or self.__width == 0:
+            return ('')
+        for i in range(self.__height):
+            saved_str += str(f"{self.print_symbol}" * self.__width) + '\n'
+        saved_str = saved_str[:-1]
+        return saved_str
