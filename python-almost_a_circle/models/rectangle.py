@@ -3,6 +3,7 @@
     Module
 """
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
@@ -12,26 +13,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """__init__"""
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        elif width < 1:
-            raise ValueError("width must be > 0")
-        self.__width = width
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        elif height < 1:
-            raise ValueError("height must be > 0")
-        self.__height = height
-        if not isinstance(x, int):
-            raise TypeError("x must be an integer")
-        elif x < 0:
-            raise ValueError("x must be >= 0")
-        self.__x = x
-        if not isinstance(y, int):
-            raise TypeError("y must be an integer")
-        elif y < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     print_symbol = "#"
@@ -114,3 +99,16 @@ class Rectangle(Base):
         """Returns a string representation of the rectangle"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        """Updates the values"""
+    if len(args) > 0:
+        self.__id = args[0]
+    if len(args) > 1:
+        self.__width = args[1]
+    if len(args) > 2:
+        self.__height = args[2]
+    if len(args) > 3:
+        self.__x = args[3]
+    if len(args) > 4:
+        self.__y = args[4]
