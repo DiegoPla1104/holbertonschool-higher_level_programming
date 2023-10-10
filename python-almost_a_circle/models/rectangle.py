@@ -98,14 +98,17 @@ class Rectangle(Base):
         return (self.__height * self.__width)
 
     def display(self):
-        """Displays the Rectangle"""
-        saved_str = ""
-        if self.__height == 0 or self.__width == 0:
-            return ('')
-        for i in range(self.__height):
-            saved_str += str(f"{self.print_symbol}" * self.__width) + '\n'
-        saved_str = saved_str[:-1]
-        print(saved_str)
+        """Function to print the Square"""
+        self.__position = [self.__x, self.__y]
+        if self.__position[0] >= 0 and self.__position[1] >= 0:
+            for A in range(self.__position[1]):
+                print()
+        for F in range(self.__height):
+            for E in range(self.__position[0]):
+                print(' ', end='')
+            for C in range(self.__width):
+                print('#', end='')
+            print()
 
     def __str__(self):
         """Returns a string representation of the rectangle"""
