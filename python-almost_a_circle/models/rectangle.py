@@ -106,3 +106,8 @@ class Rectangle(Base):
             saved_str += str(f"{self.print_symbol}" * self.__width) + '\n'
         saved_str = saved_str[:-1]
         print(saved_str)
+
+    def __str__(self):
+        """Returns a string representation of the rectangle"""
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+            {self.__width}/{self.__height})")
