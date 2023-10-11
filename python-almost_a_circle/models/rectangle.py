@@ -113,13 +113,15 @@ class Rectangle(Base):
             if len(args) > 4:
                 self.__y = args[4]
         if kwargs:
-            my_dict = {
-                "id": 0,
-                "width": 0,
-                "height": 0,
-                "x": 0,
-                "y": 0}
-            for i in range(len(kwargs)):
-                for j in range(len(my_dict)):
-                    if my_dict[j] == kwargs[i]:
-                        my_dict[j][value] = kwargs[i][value]
+            k = kwargs.keys()
+            for i in k:
+                if i == 'id':
+                    self.id = kwargs['id']
+                if i == 'width':
+                    self.width = kwargs['width']
+                if i == 'height':
+                    self.height = kwargs['height']
+                if i == 'x':
+                    self.x = kwargs['x']
+                if i == 'y':
+                    self.y = kwargs['y']
