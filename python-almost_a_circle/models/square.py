@@ -28,5 +28,5 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         elif value < 1:
             raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+        self.__size = value
+        self.width = self.__size
