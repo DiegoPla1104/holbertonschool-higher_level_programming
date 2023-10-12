@@ -130,9 +130,9 @@ class Rectangle(Base):
         """Creates a dictionary and returns it"""
 
         dictionary = {}
-        dictionary['id'] = self.id
-        dictionary['width'] = self.width
-        dictionary['height'] = self.height
         dictionary['x'] = self.x
+        dictionary['width'] = self.width
+        dictionary['id'] = self.id
+        dictionary['height'] = self.height
         dictionary['y'] = self.y
         return dictionary
