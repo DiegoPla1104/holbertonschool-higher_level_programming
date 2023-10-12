@@ -40,4 +40,4 @@ class Base:
         """Returns a string repr of the dict"""
         if json_string is None or json_string is "":
             return "[]"
-        return json.loads(json_string)
+        return list(json.loads(json_string))
