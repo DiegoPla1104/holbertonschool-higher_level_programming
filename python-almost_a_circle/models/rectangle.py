@@ -128,7 +128,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Creates a dictionary and returns it"""
-        
+
         dictionary = {}
         dictionary['id'] = self.id
         dictionary['width'] = self.width
