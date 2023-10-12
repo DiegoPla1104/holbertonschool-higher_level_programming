@@ -35,3 +35,9 @@ class Base:
         jsonstr = Base.to_json_string(ls_objs)
         with open(f"{cls.__name__}.json", mode='w', encoding='utf-8') as f:
             f.write(jsonstr)
+
+    def from_json_string(json_string):
+        """Returns a string repr of the dict"""
+        if json_string is None or json_string is "":
+            return "[]"
+        return json.loads(json_string)
