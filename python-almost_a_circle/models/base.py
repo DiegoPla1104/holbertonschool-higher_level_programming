@@ -29,7 +29,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """Saves the str repr into the file"""
         ls_objs = []
-        if list_objs is None or len(list_objs) is 0:
+        if list_objs is None or len(list_objs) == 0:
             ls_objs = []
         else:
             for i in list_objs:
@@ -41,6 +41,6 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns a string repr of the dict"""
-        if json_string is None or json_string is "":
+        if json_string is None or json_string == "":
             return "[]"
         return list(json.loads(json_string))
