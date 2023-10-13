@@ -18,12 +18,14 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Returns a string repr of the dict"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """Saves the str repr into the file"""
         ls_objs = []
@@ -36,6 +38,7 @@ class Base:
         with open(f"{cls.__name__}.json", mode='w', encoding='utf-8') as f:
             f.write(jsonstr)
 
+    @staticmethod
     def from_json_string(json_string):
         """Returns a string repr of the dict"""
         if json_string is None or json_string is "":
