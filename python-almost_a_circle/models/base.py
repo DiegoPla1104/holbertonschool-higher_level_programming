@@ -45,7 +45,7 @@ class Base:
             return "[]"
         return list(json.loads(json_string))
 
-@classmethod
+    @classmethod
     def create(cls, **dictionary):
         """
             Returns an instance with all attributes already set
