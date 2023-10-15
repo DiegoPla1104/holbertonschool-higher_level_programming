@@ -62,21 +62,17 @@ class Base:
         return dummy
 
     @classmethod
-    def load_from_file_csv(cls):
+    def load_from_file(cls):
         """
-            Load from file csv
+            Returns a list of instances
         """
-
-        filename = cls.__name__ + ".csv"
-        try:
-            with open(filename, "r", newline="") as csvfile:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
+        i_l = []
+        fn = "{}.json".format(cls.__name__)
+        if os.path.isfile(fn):
+            with open(fn) as a:
+                instance_object = cls.from_json_string(a.read())
+                for i_d in instance_object:
+                    i_l.append(cls.create(**i_d))
+                return i_l
+        else:
             return []
