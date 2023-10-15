@@ -6,6 +6,7 @@ import json
 import csv
 import os
 
+
 class Base:
     """
         Creating the attribute for said object
