@@ -1,4 +1,4 @@
---Script to show a specific description
+--Display a full table :D
 
---Second comment
+--Get table structure information
 SHOW CREATE TABLE first_table;
