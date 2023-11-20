@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = data_connector.cursor()
     cursor.execute(f"SELECT cities.name FROM cities JOIN states ON \
         cities.state_id = states.id WHERE states.name LIKE BINARY \
-            {sys.argv[4]} ORDER BY cities.id;")
+            '{sys.argv[4]}' ORDER BY cities.id;")
     listed = []
     for row in cursor.fetchall():
         listed.append(row[0])
