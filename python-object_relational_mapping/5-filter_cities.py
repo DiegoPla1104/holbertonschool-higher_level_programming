@@ -22,7 +22,7 @@ if __name__ == "__main__":
             {sys.argv[4]} ORDER BY cities.id;")
     listed = []
     for row in cursor.fetchall():
-        listed.append(row[0])    
+        listed.append(row[0])
     print(", ".join(listed))
     cursor.close()
     data_connector.close()
